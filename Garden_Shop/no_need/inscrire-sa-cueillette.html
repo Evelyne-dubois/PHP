@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Inscrire sa cueillette ouverte | Garden Shop</title>
+
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+         <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+ 
+    </head>
+ 
+    <body>
+
+    	<header>
+            <div class="container">
+                <nav id="main-menu">
+                    <ul id="main-menu_links">
+                        <li><a href="acheter.php">Acheter</a></li>
+                        <li><a href="vendre.php">Vendre</a></li>
+                        <li><a class="current" href="cueillettes.html">ceuillettes</a></li>
+                    </ul>
+                    <a id="logo" href="index.php">Garden Shop</a>
+                    <ul id="main-menu_account">
+                        <li><a href="connexion.view.php">se connecter / s'inscrire</a></li>
+                    </ul>
+                </nav>
+            </div>
+    	</header>
+
+        <div id="banner" class="banner-cueillette">
+            
+
+
+
+        </div>
+
+        <div class="container">
+            <div id="content" class="page-inscrire-cueillette">
+
+                <h2>Inscrire sa cueillette ouverte</h2>
+                <!-- <p>Une fois le formulaire validé, votre récolte sera automatiquement ajoutée à votre magasin.</p> -->
+
+                <form action="" method="post">
+
+                        <fieldset class="modalite">
+
+                            <legend>Modalité</legend>
+                            <h3>Adresse</h3>
+
+                            <ul>
+                                <li>
+                                    <?php if( isset( $errors['adresse_numero'] ) ) echo message_erreur($errors, 'adresse_numero'); ?>
+                                    <?php if( isset( $errors['adresse_rue'] ) ) echo message_erreur($errors, 'adresse_rue'); ?>
+                                    <input type="text" name="adresse_numero" id="numero" placeholder="n°" value="<?php if( !empty( $_POST['adresse_numero'] ) ) echo $_POST['adresse_numero']; ?>"/>
+                                    <input type="text" name="adresse_rue" id="rue" placeholder="Rue" value="<?php if( !empty( $_POST['adresse_rue'] ) ) echo $_POST['adresse_rue']; ?>"/>
+                                </li>
+                                <li>
+                                    <?php if( isset( $errors['adresse_cp'] ) ) echo message_erreur($errors, 'adresse_cp'); ?>
+                                    <?php if( isset( $errors['adresse_ville'] ) ) echo message_erreur($errors, 'adresse_ville'); ?>
+                                    <input type="text" name="adresse_cp" id="cp" placeholder="Localité" value="<?php if( !empty( $_POST['adresse_cp'] ) ) echo $_POST['adresse_cp']; ?>"/>
+                                    <input type="text" name="adresse_ville" id="ville" placeholder="Ville" value="<?php if( !empty( $_POST['adresse_ville'] ) ) echo $_POST['adresse_ville']; ?>"/>
+                                </li>
+                            </ul>
+
+                            <!-- <select name="adresse-presaved">
+                                <option value="maison" selected="selected">Nouveau</option>
+                              <option value="maison" selected="selected">Maison</option>
+                              <option value="jardin">jardin</option>
+                            </select> -->
+
+                            <select name="adresse_pays">
+                              <option value="belgique" selected="selected">Belgique</option>
+                              <option value="france">France</option>
+                            </select>
+
+                            
+                            <div id="horaire-cueillette">
+                                  
+                                <h3>Horaire</h3>
+
+                                <input type="date" name="">
+
+                                  <div class="heure-select">
+                                  <label>De</label>
+                                   <select name="debut_cueillette" id="debut-cueillette">
+                                     <option value="7h">7h</option>
+                                     <option value="7h30">7h30</option>
+                                     <option value="8h">8h</option>
+                                     <option value="8h30">8h30</option>
+                                     <option value="9h">9h</option>
+                                     <option value="9h30">9h30</option>
+                                     <option value="10h">10h</option>
+                                     <option value="10h30">10h30</option>
+                                     <option value="11h">11h</option>
+                                     <option value="11h30">11h30</option>
+                                     <option value="12h">12h</option>
+                                     <option value="12h30">12h30</option>
+                                     <option value="13h">13h</option>
+                                     <option value="13h30">13h30</option>
+                                     <option value="14h">14h</option>
+                                     <option value="14h30">14h30</option>
+                                     <option value="15h">15h</option>
+                                     <option value="15h30">15h30</option>
+                                     <option value="16h">16h</option>
+                                     <option value="16h30">16h30</option>
+                                     <option value="17h">17h</option>
+                                     <option value="17h30">17h30</option>
+                                     <option value="18h">18h</option>
+                                     <option value="18h30">18h30</option>
+                                     <option value="19h">19h</option>
+                                     <option value="19h30">19h30</option>
+                                     <option value="20h">20h</option>
+                                     <option value="20h30">20h30</option>
+                                     <option value="21h">21h</option>
+                                     <option value="21h30">21h30</option>
+                                     <option value="22h">22h</option>
+                                  </select>
+
+                                  <label>à</label>
+                                  <select name="fin_cueillette"  id="fin-cueillette">
+                                     <option value="7h">7h</option>
+                                     <option value="7h30">7h30</option>
+                                     <option value="8h">8h</option>
+                                     <option value="8h30">8h30</option>
+                                     <option value="9h">9h</option>
+                                     <option value="9h30">9h30</option>
+                                     <option value="10h">10h</option>
+                                     <option value="10h30">10h30</option>
+                                     <option value="11h">11h</option>
+                                     <option value="11h30">11h30</option>
+                                     <option value="12h">12h</option>
+                                     <option value="12h30">12h30</option>
+                                     <option value="13h">13h</option>
+                                     <option value="13h30">13h30</option>
+                                     <option value="14h">14h</option>
+                                     <option value="14h30">14h30</option>
+                                     <option value="15h">15h</option>
+                                     <option value="15h30">15h30</option>
+                                     <option value="16h">16h</option>
+                                     <option value="16h30">16h30</option>
+                                     <option value="17h">17h</option>
+                                     <option value="17h30">17h30</option>
+                                     <option value="18h">18h</option>
+                                     <option value="18h30">18h30</option>
+                                     <option value="19h">19h</option>
+                                     <option value="19h30">19h30</option>
+                                     <option value="20h">20h</option>
+                                     <option value="20h30">20h30</option>
+                                     <option value="21h">21h</option>
+                                     <option value="21h30">21h30</option>
+                                     <option value="22h">22h</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                        </fieldset>
+                        <fieldset id="annonce">
+                            
+                            <div id="recoltes">
+                                <legend>Récoltes à disposition</legend>
+                                <p>Indiquez vos articles à récolter</p>
+
+                                <input type="text" name="addObject" id="add_recolte" maxlength="25" placeholder="récolte disponnible"/>
+                                <div id="button_add" onclick="add_checklist(event)">+</div>
+
+                                <ul id="recoltes-disponnible">
+
+                                </ul>
+
+                            </div>
+                           
+                            
+
+
+                            <input type="submit" name="submit" value="Inscrire sa cueillette ouverte">
+
+                        </fieldset>
+
+
+                       
+                    </form>
+
+               
+    
+            </div><!-- content -->
+        </div><!--container -->
+
+        <footer>
+          <div class="container">
+            <ul id="footer-menu">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html">En savoir plus</a></li>
+              <li><a href="contact.html">Crédits</a></li>
+            </ul>
+            <strong>Garden Shop ©2014</strong>
+          </div>
+        </footer>
+
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/jquery.magnific-popup.js"></script>
+        <script src="js/script.js"></script>
+      
+    </body>
+</html>

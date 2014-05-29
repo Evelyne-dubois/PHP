@@ -1,0 +1,4 @@
+SetEnv PHP_VER 5_TEST
+SetEnv REGISTER_GLOBALS 0
+
+ErrorDocument 404 http://www.evelynedubois.be/tfe/Garden_Shop/404.php

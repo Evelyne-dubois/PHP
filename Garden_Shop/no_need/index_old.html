@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Garden Shop</title>
+
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+ 
+    </head>
+ 
+    <body>
+
+    	<header>
+            <div class="container">
+                <nav id="main-menu">
+                    <ul id="main-menu_links">
+                        <li><a href="acheter.html">Acheter</a></li>
+                        <li><a href="vendre.html">Vendre</a></li>
+                        <li><a href="cueillettes.html">Cueillettes</a></li>
+                    </ul>
+                    <a id="logo" class="current" href="index.html">Garden Shop</a>
+                    <ul id="main-menu_account">
+                        <li><a class="open-popup-link" href="#connexion-popup">se connecter / s'inscrire</a></li>
+                    </ul>
+                </nav>
+            </div>
+    	</header>
+
+      <div id="connexion-popup" class="white-popup mfp-hide">
+
+        <form action="" method="post">
+          <fieldset>
+
+             <legend>Connexion</legend>
+
+            <input type="text" name="email" placeholder="E-mail" required="required">
+            <input type="password" name="password" placeholder="Password" required="required">
+            <input type="submit" name="submit" value="Se connecter">
+
+          </fieldset>
+        </form>
+
+        <form action="" method="post" id="inscription">
+          <fieldset>
+
+            <legend>Inscription</legend>
+
+            <input type="text" name="user" placeholder="Nom d'utilisateur" required="required">
+            <input type="text" name="email" placeholder="E-mail" required="required">
+            <input type="password" name="password" placeholder="Password" required="required">
+            <input type="submit" name="submit" value="S'inscrire'">
+
+          </fieldset>
+        </form>
+
+      </div>
+
+        <div id="banner" class="banner-home">
+            <div class="container">
+                
+                <h1>Bienvenu sur Garden Shop</h1>
+                <p>Nous sommes une petite communauté de jardiniers et de consommateurs 
+à la recherche d’échange, de conseil et de partage.</p>
+                <p>Pour participer à cette expérience, vous devez vous <a href="#">connecter</a> ou vous <a href="#">inscrire</a>.</p>
+
+                <a class="banner-button" href="acheter.html">Acheter</a><span> ou </span><a class="banner-button" href="vendre.html">Vendre</a>
+
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="container">
+            <div id="content" class="home">
+                
+                <section>
+                    <h2>Les prochaines ceuillettes ouvertes</h2>
+                    <p>Venez cueillir vos propres fruits et légumes et n’oubliez pas d’apporter vos paniers.</p>
+
+                    <table class="cueillette-ouverte">
+                       <thead> <!-- En-tête du tableau -->
+                           <tr>
+                               <th colspan="3">Samedi 14 Juin</th>
+                           </tr>
+                       </thead>
+
+                       <tbody> <!-- Corps du tableau -->
+                           <tr>
+                               <td class="heure"><a href="#">10h à 12h</a></td>
+                               <td class="lieu"><a href="#">Saint-Servais</a></td>
+                               <td class="articles"><a href="#">pommes, cerises, prune.</a></td>
+                           </tr>
+                           <tr>
+                               <td class="heure"><a href="#">10h30 à 12h</a></td>
+                               <td class="lieu"><a href="#">Wépion</a></td>
+                               <td class="articles"><a href="#">fraises, framboises, cerises, salades, concombres.</a></td>
+                           </tr>
+                       </tbody>
+                    </table>
+
+                    <table class="cueillette-ouverte">
+                       <thead> <!-- En-tête du tableau -->
+                           <tr>
+                               <th colspan="3">Lundi 17 Juin</th>
+                           </tr>
+                       </thead>
+
+                       <tbody> <!-- Corps du tableau -->
+                           <tr>
+                               <td class="heure"><a href="#">16h30 à 18h</a></td>
+                               <td class="lieu"><a href="#">Nannine</a></td>
+                               <td class="articles"><a href="#">pommes, mûres, radis.</a></td>
+                           </tr>
+                       </tbody>
+                    </table>
+
+                    <table class="cueillette-ouverte">
+                       <thead> <!-- En-tête du tableau -->
+                           <tr>
+                               <th colspan="3">Mercredi 19 Juin</th>
+                           </tr>
+                       </thead>
+
+                       <tbody> <!-- Corps du tableau -->
+                           <tr>
+                               <td class="heure"><a href="#">18h à 20h</a></td>
+                               <td class="lieu"><a href="#">Namur</a></td>
+                               <td class="articles"><a href="#">pommes.</a></td>
+                           </tr>
+                       </tbody>
+                    </table>
+
+                    <div class="button">
+                        <a class="button-more" href="cueillettes.html">Plus de cueillettes ouvertes</a>
+                        <a class="button-more" href="#">Inscrire son jardin</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Récoltes les plus répendues</h2>
+
+                    <table class="recoltes-rependues">
+                       <thead> <!-- En-tête du tableau -->
+                           <tr>
+                               <th>Fruits</th>
+                               <th>Légumes</th>
+                               <th>Graines</th>
+                           </tr>
+                       </thead>
+
+                       <tbody> <!-- Corps du tableau -->
+                           <tr>
+                               <td><a href="#">Pommes verte</a></td>
+                               <td class="border"><a href="#">Salades frisée</a></td>
+                               <td><a href="#">Tomates</a></td>
+                           </tr>
+                           <tr>
+                               <td><a href="#">Fraises</a></td>
+                               <td class="border"><a href="#">Concombre</a></td>
+                               <td><a href="#">Salades</a></td>
+                           </tr>
+                           <tr>
+                               <td><a href="#">Cerises</a></td>
+                               <td class="border"><a href="#">Pommes de terre</a></td>
+                               <td><a href="#">Radis</a></td>
+                           </tr>
+                           <tr>
+                               <td><a href="#">Framboises</a></td>
+                               <td class="border"><a href="#">Haricots</a></td>
+                               <td><a href="#">Concombres</a></td>
+                           </tr>
+                       </tbody>
+                    </table>
+                    
+                    <div class="button">
+                        <a class="button-more" href="acheter.html">Plus de récoltes</a>
+                    </div>
+                </section>
+
+                <section class="last-section">
+
+                    <h2>Récoltes à proximité</h2>
+                    <label for="whereareyou" id="whereareyou-label">De</label>
+                    <input type="text" value="Namur" name="" id="whereareyou">
+
+                    <table class="recoltes-proximite">
+
+                       <tbody> <!-- Corps du tableau -->
+                           <tr class="tres-proche">
+                               <td class="distance"><a href="#"><span>3</span> km</a></td>
+                               <td class="lieu"><a href="#">Saint-Servais</a></td>
+                               <td class="articles"><a href="#">pommes, fraises, radis.</a></td>
+                           </tr>
+                           <tr class="tres-proche">
+                               <td class="distance"><a href="#"><span>8</span> km</a></td>
+                               <td class="lieur"><a href="#">Wépion</a></td>
+                               <td class="articles"><a href="#">fraise.</a></td>
+                           </tr>
+                           <tr class="proche">
+                               <td class="distance"><a href="#"><span>10</span> km</a></td>
+                               <td class="lieu"><a href="#">Nannine</a></td>
+                               <td class="articles"><a href="#">franboises, pommes de terre, concombres.</a></td>
+                           </tr>
+                           <tr class="loin">
+                               <td class="distance"><a href="#"><span>19</span> km</a></td>
+                               <td class="lieu"><a href="#">Andenne</a></td>
+                               <td class="articles"><a href="#">tomates cerise, salades verte.</a></td>
+                           </tr>
+                       </tbody>
+                    </table>
+
+                    <div class="button">
+                        <a class="button-more" href="acheter.html">Plus de récoltes</a>
+                    </div>
+
+                </section>
+
+            </div><!-- content -->
+            <aside id="widget">
+
+              <div id="meteo">
+                
+                <div id="today">
+                  <a id="today-date" href="#">Aujourd'hui à Namur</a>
+                  <div id="today-t">
+                    <span>24C°</span>
+                    <img src="images/widget/sun.png" alt="Grand soleil" />
+                  </div>
+                </div>
+                  <ul id="next-days">
+                    <li>
+                      <div class="day">Vendredi 13 juin</div>
+                      <div class="weather">9° / 22°</div>
+                      <div class="icon"><img src="images/widget/small-sun.png" alt="Grand soleil" /></div>
+                    </li>
+                    <li>
+                      <div class="day">Samedi 14 Juin</div>
+                      <div class="weather">11° / 23°</div>
+                      <div class="icon"><img src="images/widget/small-cloud.png" alt="Nuageux" /></div>
+                    </li>
+                    <li>
+                      <div class="day">Dimanche 15 Juin</div>
+                      <div class="weather">10° / 20°</div>
+                      <div class="icon"><img src="images/widget/small-rain.png" alt="Pluie" /></div>
+                    </li>
+                    <li>
+                      <div class="day">Lundi 16 Juin</div>
+                      <div class="weather">9° / 23°</div>
+                      <div class="icon"><img src="images/widget/small-rain-sun.png" alt="Mitigé" /></div>
+                    </li>
+                    <li id="reduce">Réduire</li>
+                  </ul>
+              </div>
+       
+            </aside>
+        </div><!-- container -->
+
+        <footer>
+          <div class="container">
+            <ul id="footer-menu">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html">En savoir plus</a></li>
+              <li><a href="contact.html">Crédits</a></li>
+            </ul>
+            <strong>Garden Shop ©2014</strong>
+          </div>
+        </footer>
+
+
+      <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+      <script src="js/jquery.magnific-popup.js"></script>
+      <script src="js/script.js"></script>
+
+    </body>
+</html>
