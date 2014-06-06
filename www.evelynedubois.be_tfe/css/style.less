@@ -1,0 +1,3187 @@
+/*
+
+CSS
+fonts used
+open sans: light, semi-bold
+lib: regular, bold
+
+*/
+
+
+@font-face {
+    font-family: 'Mission-Script';
+    src: url('../fonts/Mission-Script.eot');
+    src: url('../fonts/Mission-Script.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Mission-Script.woff') format('woff'),
+         url('../fonts/Mission-Script.ttf') format('truetype'),
+         url('../fonts/.svg#julius_sans_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'liberation';
+    src: url('../fonts/LiberationSerif-Regular-webfont.eot');
+    src: url('../fonts/LiberationSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LiberationSerif-Regular-webfont.woff') format('woff'),
+         url('../fonts/LiberationSerif-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/LiberationSerif-Regular-webfont.svg#liberation_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'liberation_serifitalic';
+    src: url('LiberationSerif-Italic-webfont.eot');
+    src: url('LiberationSerif-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LiberationSerif-Italic-webfont.woff') format('woff'),
+         url('LiberationSerif-Italic-webfont.ttf') format('truetype'),
+         url('LiberationSerif-Italic-webfont.svg#liberation_serifitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'liberation_bold';
+    src: url('../fonts/LiberationSerif-Bold-webfont.eot');
+    src: url('../fonts/LiberationSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LiberationSerif-Bold-webfont.woff') format('woff'),
+         url('../fonts/LiberationSerif-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/LiberationSerif-Bold-webfont.svg#liberation_serifbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'liberation_serifbold_italic';
+    src: url('LiberationSerif-BoldItalic-webfont.eot');
+    src: url('LiberationSerif-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LiberationSerif-BoldItalic-webfont.woff') format('woff'),
+         url('LiberationSerif-BoldItalic-webfont.ttf') format('truetype'),
+         url('LiberationSerif-BoldItalic-webfont.svg#liberation_serifbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+// Core variables and mixins
+@import "../less/booststrap3/variables.less";
+@import "../less/booststrap3/mixins.less";
+// @import "./less/booststrap3/mixins-unresponsive.less";
+  
+// Reset
+// @import "reset.css";
+// @import "../less/booststrap3/normalize.less";
+@import "../less/booststrap3/print.less";
+
+// Core CSS
+@import "../less/booststrap3/scaffolding.less";
+
+/*
+* LOAD ONLY WHAT YOU NEED !
+*/
+
+// Help CSS
+// @import "./less/booststrap3/type.less";
+// @import "./less/booststrap3/code.less";
+// @import "./less/booststrap3/tables.less";
+// @import "./less/booststrap3/forms.less";
+// @import "./less/booststrap3/buttons.less";
+
+// Components
+
+// @import "./less/booststrap3/component-animations.less";
+// @import "./less/booststrap3/glyphicons.less";
+// @import "./less/booststrap3/dropdowns.less";
+// @import "./less/booststrap3/button-groups.less";
+// @import "./less/booststrap3/input-groups.less";
+// @import "./less/booststrap3/navs.less";
+// @import "./less/booststrap3/navbar.less";
+// @import "./less/booststrap3/breadcrumbs.less";
+// @import "./less/booststrap3/pagination.less";
+// @import "./less/booststrap3/pager.less";
+// @import "./less/booststrap3/labels.less";
+// @import "./less/booststrap3/badges.less";
+// @import "./less/booststrap3/jumbotron.less";
+// @import "./less/booststrap3/thumbnails.less";
+// @import "./less/booststrap3/alerts.less";
+// @import "./less/booststrap3/progress-bars.less";
+// @import "./less/booststrap3/media.less";
+// @import "./less/booststrap3/list-group.less";
+// @import "./less/booststrap3/panels.less";
+// @import "./less/booststrap3/wells.less";
+// @import "./less/booststrap3/close.less";
+
+// Components w/ JavaScript
+// @import "./less/booststrap3/modals.less";
+// @import "./less/booststrap3/tooltip.less";
+// @import "./less/booststrap3/popovers.less";
+// @import "./less/booststrap3/carousel.less";
+
+// WP
+// @import "../less/booststrap3/wp.less";
+
+// Utility classes
+// @import "./less/booststrap3/3l.less";
+// @import "./less/booststrap3/utilities.less";
+//@import "./less/booststrap3/responsive-utilities.less";
+
+
+
+/* Body reset
+------------------------- */
+
+
+
+body {
+  margin: 0;
+  font-family: 'liberation', serif;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+
+}
+
+h2{
+	font-family: @font-family-sans-serif;
+	font-size: 22px;
+	font-weight: @light;
+	color: #000;
+}
+
+h3{
+	font-family: @font-family-sans-serif;
+	font-size: 16px;
+	font-weight: @light;
+	color: #000;
+	padding: 15px 0 5px 0;
+}
+
+p{ padding: 3px 0; }
+
+a{ color: #353535; }
+
+table{border-collapse: collapse;}
+
+.container{
+	.make-container();
+	// width: 940px;
+	// margin: 0 auto;
+	// padding: 0 10px;	
+	overflow: hidden;
+}
+
+#content,
+aside{
+	padding-top: 46px;
+	overflow: hidden;
+}
+
+section{ margin-bottom: 60px; }
+section.last-section{ margin-bottom: 0}
+
+.hide{display: none;}
+.show{display: block;}
+.left{float: left;}
+.right{float: right;}
+.overflow{ overflow: hidden;}
+// .text-center {text-align: center;}
+// #banner.banner-contact p{
+// 	position: relative;
+// 	top: 170px;
+// 	left: 0;
+// 	padding: 40px 0;
+// 	font-size: 24px;
+// 	font-family: @font-family-sans-serif;
+// 	font-weight: @light;
+// 	color: #fff;
+// 	// text-transform: uppercase;
+// 	text-align: center;
+// 	background: rgba(0, 0, 0 ,0.5);
+// 	// opacity: 0.8;
+// }
+
+textarea{
+	resize:none;
+}
+
+// Générale stuff
+/* -------- button -------- */
+
+.button{
+	width: 100%;
+	padding: 15px 0;
+	overflow: hidden;
+}
+
+.button-more {
+	float: left;
+
+	margin-right: 15px;
+	padding: 5px 20px;
+	padding-left: 54px;
+
+	color: #000;
+	font-family: @font-family-sans-serif;
+	font-weight: @light;
+
+	background: url(../images/more.png) left 0  no-repeat, 
+				url(../images/button-more_hover.png) -250px top repeat-y;
+
+	border: 1px solid @main-color;
+
+	-webkit-transition: background 0.3s ease-out;
+	-moz-transition: background 0.3s ease-out;
+	-ms-transition: background 0.3s ease-out;
+	-o-transition: background 0.3s ease-out;
+	transition: background 0.3s ease-out;
+}
+
+.button-more:hover{
+	color: #fff;
+
+	background: url(../images/more.png) left 0  no-repeat, 
+				url(../images/button-more_hover.png) right top repeat-y;
+				
+}
+
+.button-more:active{
+	color: #fff;
+	background: url(../images/more.png) left 0  no-repeat, 
+				@main-color;
+
+	-webkit-transition: 0s ease-out;
+	-moz-transition: 0s ease-out;
+	-ms-transition: 0s ease-out;
+	-o-transition: 0s ease-out;
+	transition: 0s ease-out;
+}
+
+#fav-button{
+	width: 205px;
+}
+
+.button-more.checked{
+	color: #fff;
+
+	background:  
+				url(../images/more.png) left -35px no-repeat,
+				@main-color;
+}
+
+
+.button-edit{
+	padding: 20px 0 0px 0;
+}
+.button-edit a{
+	padding: 10px 20px 10px 45px;
+	color: @main-color;
+	background: url(../images/editer-button.png) 10px -30px no-repeat;
+	border: 1px solid @main-color;
+
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-out;
+	-ms-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+
+}
+.button-edit a:hover{
+	
+	color: #fff;
+	background:  url(../images/editer-button.png) 10px 8px no-repeat, @main-color;
+}
+.button-edit a:active{
+	color: #fff;
+	background:  url(../images/editer-button.png) 10px 8px no-repeat, @main-color;
+}
+
+/* -------- Form -------- */
+
+form{ padding-top: 12px; }
+fieldset{ padding: 5px 0; }
+legend{
+	font-family: @font-family-sans-serif;
+	font-size: 20px;
+	font-weight: @light;
+}
+
+label,
+input,
+select{
+	font-family: @font-family-sans-serif;
+	font-size: 14px;
+	font-weight: @light;
+}
+
+input,
+select{
+	display: block;
+	width: 220px;
+
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid @grey-color;
+
+	outline: none;
+}
+
+input:focus,
+select:focus{
+	border: 1px solid @third-color;
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+
+	color: @main-color;
+	margin-top: 3px;
+	margin-left: 2px;
+
+	/* Hide the input, but have it still be clickable */
+    opacity: 0;
+    cursor: pointer;
+}
+
+ul.form-list li {
+	margin: 10px 0;
+}
+
+ul.form-list input[type='checkbox'] + label {
+	padding-left: 30px;
+    cursor: pointer;
+    
+    background: url(../images/sprite-form.png) 0 -61px no-repeat;
+}
+
+ul.form-list input[type='checkbox']:hover + label {
+   background: url(../images/sprite-form.png) 0 -99px no-repeat;
+}
+
+ul.form-list input[type='checkbox']:checked + label {
+   background: url(../images/sprite-form.png) 0 -137px no-repeat;
+}
+
+
+ul.form-list input[type='radio'] + label {
+	padding-left: 30px;
+    background: url(../images/sprite-form.png) 0 -175px no-repeat;
+}
+
+ul.form-list input[type='radio']:hover + label {
+   background: url(../images/sprite-form.png) 0 -213px no-repeat;
+}
+
+ul.form-list input[type='radio']:checked + label {
+   background: url(../images/sprite-form.png) 0 -251px no-repeat;
+}
+
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+
+	// pour firefox qui ne supprime pas la flèche
+	text-indent: 0.01px;
+    text-overflow: '';
+
+	background: url(../images/sprite-form.png) top right no-repeat;
+}
+
+// ie
+select::-ms-expand {
+    display: none;
+}
+
+select option.default{
+	color: #999;
+}
+
+select option {
+	color: #353535;
+}
+
+select option:hover{
+	color: #000;
+	cursor: pointer;
+}
+
+.heure-select {
+	overflow: hidden;
+}
+.heure-select label{
+	float: left;
+	line-height: 62px;
+}
+.heure-select select{
+	float: left;
+	width: 106px;
+	margin: 15px;
+	margin-top: 10px;
+	padding-left: 8px;
+	padding-right: 0;
+
+}
+
+input[type="submit"]{
+	font-weight: @semi-bold;
+	text-transform: uppercase;
+	color: #f9f9f9;
+	background: @main-color;
+
+	border: 1px solid @main-color;
+
+	-webkit-transition: 0.2s ease;
+	-moz-transition: 0.2s ease;
+	-ms-transition: 0.2s ease;
+	-o-transition: 0.2s ease;
+	transition: 0.2s ease;
+}
+
+select:hover,
+input[type="submit"]:hover,
+input[type="checkbox"]:hover,
+input[type="radio"]:hover,
+label{
+	cursor: pointer;
+}
+
+input[type="submit"]:hover{
+	background: #fff;
+	border: 1px solid @main-color;
+	color: @main-color;
+}
+
+textarea{
+	width: 280px;
+	max-width: 400px;
+	height: 100px;
+	margin: 10px 0;
+
+	font-family: @font-family-sans-serif;
+	padding: 5px 10px;
+	border: 1px solid @grey-color;
+
+}
+
+// ::-webkit-input-placeholder {color: #c9c9c9; }
+// :-moz-placeholder {color: #c9c9c9;}
+// ::-o-placeholder {color: #c9c9c9;}
+// :-ms-input-placeholder {color: #c9c9c9;}
+
+
+/* -----------------------------*/
+/* -------- #main-menu -------- */
+/* -----------------------------*/
+
+header {
+	border-bottom: 2px solid @menu-color;
+}
+
+#main-menu-smartphone{
+	display: none;
+}
+
+#main-menu{
+	position: relative;
+	overflow: hidden;
+}
+
+#main-menu ul{
+	overflow: hidden;
+}
+
+#main-menu li{
+	float: left;
+	margin: 0 10px;
+}
+
+#main-menu li a{
+	display: block;
+	padding: 20px 10px;
+
+	font-family: @font-family-sans-serif;
+	font-size: 16px;
+	font-weight: @light;
+
+	border-top: 0px solid @menu-color;
+
+}
+
+#main-menu a{
+	color: @menu-color;
+	text-align: center;
+}
+
+#main-menu #main-menu_account a{
+	font-size: 14px;
+	padding: 25px 10px;
+}
+
+#main-menu a span{
+	display: block;
+	font-size: 10px;
+	line-height: 5px;
+}
+
+// span.spacing{
+// 	letter-spacing: 1px;
+// }
+
+	/* ---- #links ----*/
+
+#main-menu_links{
+	float: left;
+}
+
+#main-menu_links li:first-child{
+	margin-left: 0;
+}
+
+	/* ---- #logo ---- */
+
+#logo {
+	display: block;
+	text-indent: -9999px;
+
+	width: 160px;
+	height: 71px;
+
+	position: absolute;
+	left: 50%;
+	margin-left: -80px;
+
+	background: url(../images/sprite-md.png) no-repeat;
+	background-position: 0 0;
+
+	 border-top: 0px solid @menu-color;
+
+	 // -webkit-transition: border 0.2s ease;
+	 // -moz-transition: border 0.2s ease;
+	 // -ms-transition: border 0.2s ease;
+	 // -o-transition: border 0.2s ease;
+	 // transition: border 0.2s ease;
+}
+
+	/* ---- account ---- */
+
+#main-menu_account {
+	float: right;
+}
+
+#main-menu_account li:last-child{
+	margin-right: 0;
+}
+
+	/* ---- Hover & Active & Current ---- */
+
+#main-menu li a:hover{
+	padding: 16px 10px 20px 10px;
+	color: @menu-color-hover;
+	border-top: 4px solid @menu-color-hover;
+
+	//bug sur safari, firefox
+	// -webkit-transition: border 0.2s ease-out,
+	// 					padding 0.2s linear;
+	// -moz-transition: 0.2s ease;
+	// -ms-transition: 0.2s ease;
+	// -o-transition: 0.2s ease;
+	// transition: border 0.2s ease;
+}
+
+#main-menu #main-menu_account a:hover{
+	padding: 21px 10px 25px 10px;
+}
+
+#main-menu #logo:hover{
+	background: url(../images/sprite-md.png) no-repeat;
+	background-position: 0 -72px;
+
+}
+
+#main-menu #logo:active{
+	border-top: 4px solid @menu-color;
+}
+
+#main-menu li a:active{
+// #main-menu #logo:active{
+	border-top: 4px solid @menu-color;
+}
+
+#main-menu #logo.current{
+	background: url(../images/sprite-md.png) no-repeat;
+	background-position: 0 0;
+
+	border-top: 4px solid @menu-color;
+}
+
+#main-menu li a.current,
+#main-menu li a.current:hover{
+	padding: 16px 10px 20px 10px;
+	color: @menu-color;
+	border-top: 4px solid @menu-color;
+	// background: url(../images/current-arrow.png) center bottom no-repeat;
+}
+
+#main-menu #main-menu_account a.current,
+#main-menu #main-menu_account a.current:hover{
+	padding: 21px 10px;
+}
+
+/* ---- #banner ---- */
+
+#banner {
+	height: 300px;
+}
+
+.banner-home{
+	background: url(../images/banner/banner-md.jpg) no-repeat;
+	background-position: center 0 ;
+}
+
+.banner-acheter{
+	background: url(../images/banner/banner-md.jpg) no-repeat;
+	background-position: center -310px ;
+}
+
+.banner-vendre{
+	background: url(../images/banner/banner-md.jpg) no-repeat;
+	background-position: center -620px ;
+}
+
+.banner-cueillette{
+	background: url(../images/banner/banner-md.jpg) no-repeat;
+	background-position: center -930px ;
+}
+
+.banner-error{
+	background: url(../images/banner/error-md.jpg) no-repeat;
+	background-position: center 0 ;
+}
+
+//banner boutique
+.banner_shop_un{
+	background: url(../images/banner/boutique-md.jpg) no-repeat;
+	background-position: center 0 ;
+}
+
+.banner_shop_deux{
+	background: url(../images/banner/boutique-md.jpg) no-repeat;
+	background-position: center -310px ;
+}
+
+.banner_shop_trois{
+	background: url(../images/banner/boutique-md.jpg) no-repeat;
+	background-position: center -620px ;
+}
+
+.banner_shop_quatre{
+	background: url(../images/banner/boutique-md.jpg) no-repeat;
+	background-position: center -930px ;
+}
+
+.banner_shop_cinq{
+	background: url(../images/banner/boutique-md.jpg) no-repeat;
+	background-position: center -1240px ;
+}
+
+	/* -- #banner > home-- */
+
+#banner .container{
+	width: 655px;
+	color: #f9f9f9;
+	font-family: @font-family-sans-serif;
+	font-size: 16px;
+	text-align: center;
+
+	overflow: hidden;
+}
+
+#banner p{
+	padding: 5px 0;
+}
+
+#banner h1{
+ 	font-family: 'Mission-Script', cursive;
+ 	font-size: 40px;
+ 	padding: 30px 0 0 0;
+}
+
+#banner a{
+	// font-family: 'liberation_bold', serif;
+	font-family: @font-family-sans-serif;
+	font-weight: @semi-bold;
+	color: #f9f9f9;
+	// border-bottom: 1px solid #f9f9f9;
+}
+
+#banner a:hover{ border-bottom: 1px solid #f9f9f9;}
+
+#banner a.banner-button,
+#banner span{
+	float: left;
+	line-height: 43px;
+	margin-top: 26px;
+}
+
+#banner span{
+	text-transform: uppercase;
+	font-family: 'liberation_bold', serif;
+	font-size: 24px;
+	padding: 0 39px;
+}
+
+#banner a.banner-button{
+	// float: left;
+
+	display: block;
+	width: 260px;
+	height: 45px;
+
+	font-family: @font-family-sans-serif;
+	color: @menu-color;
+	font-size: 22px;
+
+	background: #f9f9f9;
+
+	-webkit-transition: background 0.2s ease;
+	-moz-transition: background 0.2s ease;
+	-ms-transition: background 0.2s ease;
+	-o-transition: background 0.2s ease;
+	transition: background 0.2s ease;
+}
+
+#banner a.banner-button:hover{
+	color: #f9f9f9;
+	background: @menu-color;
+	border: none;
+}
+
+/* ------ Footer ------ */
+
+footer{
+	margin-top: 90px;
+	font-family: @font-family-sans-serif;
+	font-size: 14px;
+	font-weight: @light;
+	padding: 5px 0;
+	background: #353535;
+	overflow: hidden;
+}
+
+footer #footer-menu{
+	float: left;
+
+	overflow: hidden;
+}
+
+footer #footer-menu li{
+	float: left;
+	margin: 0 5px;
+}
+
+footer #footer-menu li:first-child{ margin: 0; }
+
+footer a{
+	color: #f9f9f9;
+	padding: 5px 10px;
+}
+
+footer a:hover{
+	text-decoration: underline;
+}
+
+footer a.current{
+	text-decoration: underline;
+}
+
+footer strong{
+	float: right;
+	color: #f9f9f9;
+}
+
+footer#footer-magasin{
+	margin-top: 20px;
+}
+
+/* ------ Pop-in inscription ------ */
+
+#connexion-popup {
+	overflow: hidden;
+	display: block;
+	width: 641px;
+	height: 400px;
+	// min-height: 400px;
+	// height: auto;
+	margin: 0 auto;
+}
+
+// #connexion-popup ~ #create_shop{
+// 	height: 900px;
+// }
+
+.white-popup{
+  position: relative;
+  background: #FFF;
+  padding: 30px 0 40px 0;
+  width:auto;
+  // max-width: 500px;
+  margin: 20px auto;
+}
+
+#iframe_connexion_content{
+	margin: 0 auto;
+}
+
+#iframe_connexion_content form{
+	float: left;
+	padding: 0px 50px;
+}
+
+#iframe_connexion_content fieldset{
+	padding: 0;
+}
+
+#iframe_connexion_content fieldset legend{
+	padding-bottom: 15px;
+}
+
+ p.error_messages{
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	padding-top: 5px;
+	line-height: 14px;
+	color: @main-color;
+}
+
+#iframe_connexion_content form#inscription{
+	border-left: 1px solid @grey-color;
+}
+
+#iframe_connexion_content form input[type="submit"]{
+	margin-bottom: 0;
+}
+
+/* ------ Pop-in create-shop ------ */
+#create_shop-popup{
+	overflow: hidden;
+	display: block;
+	width: 770px;
+	height: 970px;
+}
+ form#create_shop{
+	overflow: hidden;
+	width: 770px;
+	padding: 0 58px;
+	// height: 50px;
+}
+
+form#create_shop fieldset{
+	float: left;
+	width: 300px;
+	margin-top: 26px;
+}
+
+form#create_shop fieldset.modalite{
+	width: 329px;
+	margin-left: 25px;
+	padding-left: 40px;
+	border-left: 1px solid @grey-color;
+}
+
+
+#create_shop p a{ color: @main-color; }
+#create_shop p a:hover{ border-bottom: 1px solid @main-color }
+#create_shop p a:active{ color: @grey-color; border-bottom: 0px solid @main-color }
+
+#create_shop legend#creat_shop_legend{padding-bottom: 0px;}
+#create_shop h3{padding-top:0;}
+#create_shop select[name="adresse_pays"] {margin-bottom: 26px;}
+#create_shop input.shop_name{margin-bottom: 26px;}
+#create_shop input.shop_name,
+#create_shop input.place_name{
+	width: 285px;
+}
+ul.banner_choice{width: 285px;}
+ul.banner_choice li{
+	margin: 10px 0;   
+}
+
+ul.banner_choice input[type="radio"]{
+	// position: absolute;
+	display: block;
+	width: 285px;
+	height: 71px;
+
+	/* Hide the input, but have it still be clickable */
+    opacity: 0;
+    cursor: pointer;
+}
+
+ul.banner_choice input[type='radio'] + label{
+	display: block;
+	width: 285px;
+	height: 71px;
+	text-indent: -9999px;	
+}
+
+ul.banner_choice input[type='radio']#banner_shop_un + label{ background: url(../images/banner/shop_banner-min_1.jpg) 0 0 no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_un:hover + label{ background: url(../images/banner/shop_banner-min_1.jpg) 0 -81px no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_un:checked + label{background: url(../images/banner/shop_banner-min_1.jpg) 0 -81px no-repeat; border: 2px solid @main-color; }
+
+ul.banner_choice input[type='radio']#banner_shop_deux + label{ background: url(../images/banner/shop_banner-min_2.jpg) 0 0 no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_deux:hover + label{ background: url(../images/banner/shop_banner-min_2.jpg) 0 -81px no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_deux:checked + label{background: url(../images/banner/shop_banner-min_2.jpg) 0 -81px no-repeat; border: 2px solid @main-color; }
+
+ul.banner_choice input[type='radio']#banner_shop_trois + label{ background: url(../images/banner/shop_banner-min_3.jpg) 0 0 no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_trois:hover + label{ background: url(../images/banner/shop_banner-min_3.jpg) 0 -81px no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_trois:checked + label{background: url(../images/banner/shop_banner-min_3.jpg) 0 -81px no-repeat; border: 2px solid @main-color; }
+
+ul.banner_choice input[type='radio']#banner_shop_quatre + label{ background: url(../images/banner/shop_banner-min_4.jpg) 0 0 no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_quatre:hover + label{ background: url(../images/banner/shop_banner-min_4.jpg) 0 -81px no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_quatre:checked + label{background: url(../images/banner/shop_banner-min_4.jpg) 0 -81px no-repeat; border: 2px solid @main-color; }
+
+ul.banner_choice input[type='radio']#banner_shop_cinq + label{ background: url(../images/banner/shop_banner-min_5.jpg) 0 0 no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_cinq:hover + label{ background: url(../images/banner/shop_banner-min_5.jpg) 0 -81px no-repeat; }
+ul.banner_choice input[type='radio']#banner_shop_cinq:checked + label{background: url(../images/banner/shop_banner-min_5.jpg) 0 -81px no-repeat; border: 2px solid @main-color; }
+
+form#create_shop fieldset#valider-boutique{
+	width: 651px;
+	margin-top: 0;
+}
+#create_shop input[type="submit"]{
+	clear: both;
+	width: 285px;
+	float: right;
+	margin-top: 24px;
+}
+
+
+/* ------ Home ------ */
+
+	/* -- content -- */
+
+#content.home{
+	.make-md-column(11);
+	// background: #ccc;
+}
+
+//cueillette
+
+table.cueillette-ouverte{
+	.make-md-column(16);
+	border: 1px solid @main-color;
+	margin: 10px 0;
+}
+
+table.cueillette-ouverte th{
+	font-family: @font-family-sans-serif;
+	font-size: 15px;
+	// font-weight: @semi-bold;
+	color: #f9f9f9;
+	background: @second-color;
+	text-align: left;
+	padding: 3px 10px;
+
+}
+
+table.cueillette-ouverte tr{
+	border-top: 1px solid @grey-color;
+}
+
+table.cueillette-ouverte thead tr{
+	border: none;
+	font-weight: 600;
+}
+table.cueillette-ouverte thead tr th{
+	// color: #656565;
+}
+
+table.cueillette-ouverte tr{
+	// background: url(../images/loupe.png) no-repeat;
+}
+
+table.cueillette-ouverte tr .articles{
+	background: 
+				url(../images/td-hover.png) 1920px top repeat-y,
+				url(../images/loupe.png) 550px center no-repeat;
+
+	-webkit-transition: background 0.4s ease-out;
+	-moz-transition: background 0.4s ease-out;
+	ms-transition: background 0.4s ease-out;
+	-o-transition: background 0.4s ease-out;
+	transition: background 0.4s ease-out;	
+}
+
+table.cueillette-ouverte tr:hover .articles{
+	background: url(../images/loupe.png) center right no-repeat,
+	 			url(../images/td-hover.png) top right repeat-y
+				;
+
+}
+
+table.cueillette-ouverte td a{
+	display: block;
+	width: 100%;
+	padding: 10px;
+	color: #353535;
+}
+
+table.cueillette-ouverte td.articles a{
+	padding-right: 30px;
+}
+
+table.cueillette-ouverte .heure{
+	// padding: 10px;
+	width: 20%;
+	text-align: center;
+	border-right: 1px solid @grey-color;
+}
+
+table.cueillette-ouverte .lieu {
+	font-family: 'liberation_bold';
+	text-align: right;
+	width: 20%;
+}
+
+table.cueillette-ouverte .articles{
+	// padding: 10px;
+	// padding-right: 15px;
+	border-right: 2px solid @main-color;
+}
+
+.home table.cueillette-ouverte tbody .articles{
+	background: url(../images/loupe.png) 500px center no-repeat,
+				url(../images/td-hover.png) 850px top repeat-y;
+				
+
+	-webkit-transition: background 0.4s ease-out;
+	-moz-transition: background 0.4s ease-out;
+	-ms-transition: background 0.4s ease-out;
+	-o-transition: background 0.4s ease-out;
+	transition: background 0.4s ease-out;
+}
+
+.home table.cueillette-ouverte tbody tr:hover  .articles{
+		background: url(../images/loupe.png) center right no-repeat,
+	 				url(../images/td-hover.png) top right repeat-y;
+}
+
+
+ul.recoltes-rependues{
+	float: left;
+	margin: 15px 35px 15px 0;
+}
+ul.recoltes-rependues.border{border-right: 1px solid @grey-color; }
+ul.recoltes-rependues li{ margin: 5px 0; }
+
+ul.recoltes-rependues li a{
+	display: block;
+	width: 150px;
+	padding: 0;
+}
+
+ul.recoltes-rependues li a:hover{color: @main-color;}
+
+ul.recoltes-rependues li.recoltes-type{
+	font-family: @font-family-sans-serif;
+	font-size: 16px;
+	font-weight: @semi-bold;
+}
+
+
+//Proximité
+label#whereareyou-label,
+input#whereareyou{
+	display: inline;
+}
+
+input#whereareyou{
+	width: 120px;
+	color: @four-color;
+	font-family: @font-family-serif;
+	font-size: 18px;
+	padding: 0 5px;
+	margin: 0;
+	border: none;
+	// border-bottom: 1px solid @grey-color;
+}
+
+input#whereareyou:hover{
+	cursor: pointer;
+}
+
+input#whereareyou:focus{
+	outline: none;
+	cursor: auto;
+	border: 1px solid @grey-color;
+}
+
+table.recoltes-proximite{
+	.make-md-column(16);
+	margin: 15px 0;
+}
+
+table.recoltes-proximite tr{
+	// border-right: 1px solid @grey-color;
+}
+
+table.recoltes-proximite tr.tres-proche td.distance a{ color: @four-color; }
+table.recoltes-proximite tr.proche td.distance a{ color: @main-color; }
+table.recoltes-proximite tr.loin td.distance a{ color: @third-color; }
+
+table.recoltes-proximite td.distance {
+	width: 8%;
+	font-size: 14px;
+	text-align: right;
+}
+
+table.recoltes-proximite td.distance span{ font-size: 20px; }
+table.recoltes-proximite td.lieu{ width: 20%; }
+
+table.recoltes-proximite td a{
+	display: block;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+table.recoltes-proximite td.distance a{
+	padding: 0;
+}
+
+table.recoltes-proximite tr.tres-proche:hover a{ color: @four-color; }
+table.recoltes-proximite tr.proche:hover a{ color: @main-color; }
+table.recoltes-proximite tr.loin:hover a{ color: @third-color; }
+
+	/* -- sidebar -- */
+
+aside#widget{
+	.make-md-column(5);
+	padding-top: 148px;
+}
+
+//  Météo 
+
+#meteo{
+	border: 1px solid @main-color;
+}
+
+#meteo a{
+	display: block;
+	width: 100%;
+}
+
+#meteo p#today-date{
+	color: #f9f9f9;
+	font-size: 14px;
+	background: @main-color;
+	padding: 3px 10px;
+	cursor: pointer;
+}
+
+#meteo div#today-t{
+	width: 100%;
+	height: 95px;
+
+	border-bottom: 2px solid @main-color;
+	background: url(../images/bg_meteoplus_hover.png) center 95px no-repeat,
+				url(../images/bg_meteo_hover.png) top left repeat;		
+
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-out;
+	-ms-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+}
+
+#meteo div#today-t span{
+	color: @main-color;
+	font-size: 37px;
+	line-height: 95px;
+
+	padding-left: 63px;
+}
+
+#meteo div#today-t img{
+	margin: 0 15px;
+	margin-top: -12px;
+}
+
+#meteo div#today-t:hover{
+	cursor: pointer;
+	height: 110px;
+	// border-bottom: 15px solid @main-color;
+}
+
+	// Next days
+
+#meteo ul#next-days.hide{
+	display: none;
+}
+
+#meteo ul#next-days li{
+	border-top: 1px solid @grey-color;
+
+	clear: both;
+	overflow: hidden;
+}
+
+#meteo ul#next-days li:first-child{ border: none; }
+
+#meteo ul#next-days li div{
+	float: left;
+}
+
+#meteo ul#next-days li div.day{
+	width: 35%;
+	padding: 10px 15px;
+
+	text-align: center;
+	color: #f9f9f9;
+	background: @second-color;
+}
+
+#meteo ul#next-days li div.weather{
+	width: 40%;
+	font-size: 20px;
+	color: @main-color;
+	text-align: right;
+	padding: 19px 15px;
+}
+
+#meteo ul#next-days li div.icon{
+	padding-top: 17px;
+}
+
+#meteo ul#next-days li#reduce{
+	color: @main-color;
+	text-align: center;
+	border-top: 1px solid @main-color;
+
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-out;
+	-ms-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+}
+
+#meteo ul#next-days li#reduce:hover{
+	cursor: pointer;
+	color: #fff;
+	background: @second-color;
+	border-top: 1px solid #fff;
+}
+
+
+
+/* ------ Acheter ------ */
+#content.page-acheter h2{
+	font-size: 20px;
+}
+
+// recherche-formulaire
+
+#recherche-formulaire{
+	.make-md-column(6);
+	
+	border-right: 1px solid @grey-color;
+}
+
+#recherche-formulaire label{
+	font-weight: @normal;
+}
+
+
+
+// recherche-carte
+
+#recherche-carte{
+	.make-md-column(10);
+	padding-left: 40px;
+}
+
+#googlemap{
+	position: relative;
+	width: 100%;
+	margin: 24px 0;
+
+
+	// background: #ccc;
+	height: 450px;
+
+	background: url(../images/gmap/namur.jpg) center center no-repeat;
+	// overflow: hidden;
+}
+
+#googlemap #gmap-recherche{
+	width: 487px;
+	height: 78px;
+
+	background: url(../images/gmap/recherche.png) no-repeat;
+}
+
+#googlemap #gmap-tools{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 159px;
+	height: 137px;
+
+	background: url(../images/gmap/outils.png) no-repeat;
+}
+
+#googlemap #gmap-shop_1{
+	position: absolute;
+	left: 253px;
+	top: 233px;
+	width: 34px;
+	height: 46px;
+
+	background: url(../images/gmap/gmap-shop_2.png) no-repeat;
+}
+
+#googlemap #gmap-shop_1:hover{
+	cursor: pointer;
+	background: url(../images/gmap/gmap-shop_2_hover.png) no-repeat;
+}
+
+#googlemap #gmap-shop_2{
+	position: absolute;
+	left: 73px;
+	top: 325px;
+	width: 34px;
+	height: 46px;
+
+	background: url(../images/gmap/gmap-shop_1.png) no-repeat;
+}
+
+#googlemap #gmap-shop_2:hover{
+	cursor: pointer;
+	background: url(../images/gmap/gmap-shop_1_hover.png) no-repeat;
+}
+
+#mapselected table{
+	width: 100%;
+	border: 1px solid @main-color;
+	margin: 10px 0;
+}
+
+#mapselected td a{
+	display: block;
+	padding: 10px;
+}
+
+#mapselected td.magasin{
+	width: 200px;
+	padding-left: 10px;
+}
+
+#mapselected td.articles{
+	padding-right: 20px;
+}
+
+#mapselected table tr {
+
+	// url(../images/td-hover.png) 1920px top repeat-y,
+	// url(../images/loupe.png) 550px center no-repeat;
+
+	background: url(../images/loupe.png) 800px center no-repeat,
+				url(../images/td-hover.png) 800px top repeat-y;
+
+	-webkit-transition: 0.4s ease-out;	
+	-moz-transition: background 0.4s ease-out;
+	-ms-transition: background 0.4s ease-out;
+	-o-transition: background 0.4s ease-out;
+	// transition: background 0.4s ease-out;
+}
+
+#mapselected table tr:hover {
+	background: url(../images/loupe.png) right center no-repeat,
+	 			url(../images/td-hover.png) right top repeat-y;
+}
+
+
+/* ------ Vendre ------ */
+form{
+	overflow: hidden;
+}
+.page-vendre fieldset{
+	.make-md-column(8);
+	padding: 0;
+	padding-right: 20px;
+	overflow: hidden;
+}
+.page-vendre fieldset#annonce{
+	min-height: 532px;
+}
+.page-vendre fieldset.modalite{
+	padding-left: 20px;
+	padding-right: 0;
+}
+
+.page-vendre fieldset span{
+	font-family: @font-family-sans-serif;
+	font-size: 16px;
+	font-weight: @light;
+}
+
+.page-vendre #add-price input,
+.page-vendre #add-price select{
+	display: inline;
+}
+.page-vendre #add-price input{ width: 80px; }
+.page-vendre #add-price select{ width: 90px; }
+
+fieldset.modalite select{
+	width: 285px;
+}
+
+.page-vendre #horaire-cueillette,
+.page-inscrire-cueillette #horaire-cueillette{
+	overflow: hidden;
+}
+
+ul.jours-cueillette{
+	width: 165px;
+	float: left;
+	padding: 5px 0 10px 0;
+}
+
+.heure-select{
+	clear: both;
+}
+
+.page-vendre select#debut-cueillette,
+.page-vendre select#fin-cueillette,
+.page-inscrire-cueillette select#debut-cueillette,
+.page-inscrire-cueillette select#fin-cueillette{
+	width: 107px;
+}
+
+// #heure-select label{
+// 	clear: both;
+// }
+
+fieldset.modalite input{ display: inline; }
+fieldset.modalite input.numero{ width: 40px; }
+fieldset.modalite input.rue{
+	width: 225px;
+	margin-left: 15px;
+}
+fieldset.modalite input.cp{ width: 100px; }
+fieldset.modalite input.ville{
+	width: 165px;
+	margin-left: 15px;
+}
+fieldset#ajouter_au_magasin{
+	clear: both;
+}
+fieldset.modalite input[type="submit"]{
+	width: 285px;
+}
+
+
+/* ------ Cueillette ouverte ------ */
+
+.page-cueillette form{
+	padding-top: 0;
+	padding-bottom: 24px;
+}
+.page-cueillette input{
+	display: inline;
+	margin-right: 15px;
+}
+
+.page-cueillette table.cueillette-ouverte .heure{width: 15%;}
+.page-cueillette table.cueillette-ouverte th.distance{ padding: 0}
+.page-cueillette table.cueillette-ouverte .distance{
+	width: 10%; 
+	text-align: center; 
+	padding-right: 30px;
+	border-right: 2px solid @main-color;
+}
+.page-cueillette table.cueillette-ouverte tbody .distance{
+	background: url(../images/loupe.png) 550px center no-repeat,
+				url(../images/td-hover.png) 1920px top repeat-y;
+				
+
+	-webkit-transition: background 0.4s ease-out;
+	-moz-transition: background 0.4s ease-out;
+	-ms-transition: background 0.4s ease-out;
+	-o-transition: background 0.4s ease-out;
+	transition: background 0.4s ease-out;
+}
+
+table.cueillette-ouverte tbody tr:hover  .distance{
+		background: url(../images/loupe.png) center right no-repeat,
+	 				url(../images/td-hover.png) top right repeat-y;
+}
+
+.page-cueillette table.cueillette-ouverte .lieu{ width: 17%; }
+
+table.cueillette-ouverte tr .articles{
+	border-right: 1px solid @grey-color;
+	background: none;
+}
+
+table.cueillette-ouverte tr:hover .articles{
+	background: none;
+}
+
+
+/* ------ inscrire-cueillette-ouverte ------ */
+
+.page-inscrire-cueillette form{
+	overflow: hidden;
+}
+
+.page-inscrire-cueillette fieldset{
+	.make-md-column(8);
+	float: left;
+	padding: 0;
+	// min-height: 450px;
+}
+.page-inscrire-cueillette #recoltes{
+	min-height: 280px;
+}
+
+#add_recolte{
+	float: left;
+	width: 237px;
+}
+#button_add{
+	display: block;
+	width: 38px;
+	height: 40px;
+
+	float: left;
+
+	margin: 10px 0 0 10px;
+	padding: 0 10px;
+	
+	font-size: 28px;
+	line-height: 40px;
+	color: #fff;
+	background: @main-color;
+	border: 1px solid @main-color;
+
+	cursor: pointer;
+
+	-webkit-transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-out;
+	-ms-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+}
+
+input.date{
+	width: 285px;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-moz-inner-spin-button,
+input[type=date]::-ms-inner-spin-button,
+input[type=date]::-o-inner-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    display: none;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=date]::-moz-calendar-picker-indicator,
+input[type=date]::-ms-calendar-picker-indicator,
+input[type=date]::-o-calendar-picker-indicator {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    color: @main-color;
+}
+
+#button_add:hover{
+	color: @main-color;
+	background: #fff;
+	border: 1px solid @main-color;
+}
+
+.page-inscrire-cueillette #recoltes-disponnible{
+	clear: both;
+	padding: 15px 0 20px 0;
+	font-family: @font-family-sans-serif;
+}
+
+.page-inscrire-cueillette #recoltes-disponnible li{
+	font-family: @font-family-sans-serif;
+	font-size: 16px;
+	font-weight: @light;
+	padding-left: 25px;
+
+	background: url(../images/delete-min.png) 0 6px no-repeat;
+}
+
+.page-inscrire-cueillette #recoltes-disponnible li:hover{
+	cursor: pointer;
+	background: url(../images/delete-min.png) 0 -19px no-repeat;
+}
+
+.page-inscrire-cueillette input[type="submit"]{
+	width: 285px;
+
+}
+
+
+/* ------ Search-result ------ */
+.page-search-result h2 span{
+	// font-weight: @semi-bold;
+	color: @main-color;
+}
+
+table.result{
+	width: 100%;
+	margin-top: 36px;
+	margin-bottom: 24px;
+	border: 1px solid @main-color;
+}
+
+table.result thead tr th{
+	font-family: @font-family-sans-serif;
+	font-weight: @light;
+	padding: 3px 10px;
+	color: #f9f9f9;
+	background: @main-color;
+}
+
+table.result tr{
+	border-top: 1px solid @main-color;
+}
+
+table.result tr td{
+	height: 100%;
+}
+
+table.result td a{
+	display: block;
+	// width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+table.result strong,
+table.result span{
+	display: block;
+}
+
+table.result strong{
+	font-family: 'liberation_bold', 'liberation', serif; 
+}
+
+table.result .distance{ 
+	// width: 11%;
+	text-align: right; 
+}
+table.result .lieu{ text-align: left;}
+table.result .articles{ text-align: right;}
+table.result .prix{ text-align: left;}
+table.result .satisfaction{text-align: center;}
+table.result .magasin{text-align: left;}
+table.result .not-found{ padding: 30px 0; text-align: center;}
+
+table.result .satisfaction a{
+	text-indent: -9999px;
+	min-width: 103px;
+}
+table.result .satisfaction.zero_etoile a{ background: url(../images/etoiles.png) center 0 no-repeat;}
+table.result .satisfaction.une_etoile a{ background: url(../images/etoiles.png) center -40px no-repeat;}
+table.result .satisfaction.deux_etoiles a{ background: url(../images/etoiles.png) center -80px no-repeat;}
+table.result .satisfaction.trois_etoiles a{ background: url(../images/etoiles.png) center -120px no-repeat;}
+table.result .satisfaction.quatre_etoiles a{ background: url(../images/etoiles.png) center -160px no-repeat;}
+table.result .satisfaction.cinq_etoiles a{ background: url(../images/etoiles.png) center -200px no-repeat;}
+
+table.result tbody tr .magasin{
+	background: url(../images/loupe.png) 550px center no-repeat,
+				url(../images/td-hover.png) 1920px top repeat-y;
+				
+
+	-webkit-transition: background 0.4s ease-out;
+	-moz-transition: background 0.4s ease-out;
+	-ms-transition: background 0.4s ease-out;
+	-o-transition: background 0.4s ease-out;
+	transition: background 0.4s ease-out;	
+}
+
+table.result tbody tr:hover .magasin{
+	background: url(../images/loupe.png) center right no-repeat,
+	 			url(../images/td-hover.png) top right repeat-y;
+}
+
+/* ------ Magasin ------ */
+
+// Inormations
+.page-magasin #information-magasin{
+	.make-md-column(10);
+	padding-bottom: 90px;
+}
+
+#information-magasin #satisfaction{
+	margin: 4px 0 16px 0;
+}
+
+#information-magasin li{
+	clear: both;
+	overflow: hidden;
+}
+
+#information-magasin li span{
+	font-family: @font-family-sans-serif;
+	font-size: 16px;
+	font-weight: @light;
+	margin-right: 15px;
+	float: left;
+}
+
+#information-magasin li p{
+	float: left;
+}
+
+#information-magasin #googlemap-magasin{
+	width: 460px;
+	height: 240px;
+
+	margin: 6px 0 12px 0;
+
+	background: #ccc;
+	background: url(../images/gmap/gmap_shop.jpg);
+}
+
+#information-magasin #action{
+	width: 460px;
+
+	overflow: hidden;
+	clear: both;
+}
+
+#information-magasin #action img {
+	cursor: pointer;
+}
+
+#information-magasin #action .button-more{ float: left; }
+#information-magasin #action p{ float: right; }
+#information-magasin #action span{ line-height: 30px; margin-right: 5px;}
+
+#information-magasin #action img{
+		margin-top: -3px;
+	}
+
+#information-magasin table{
+	width: 100%;
+	margin: 20px 0;
+}
+
+#information-magasin table thead td{ 
+	font-family: @font-family-sans-serif;
+	font-weight: @semi-bold;
+	padding: 5px 0;
+}
+
+#information-magasin table .articles{ width: 30%; }
+#information-magasin table .prix{ width: 15%; }
+#information-magasin table .mode{ width: 30%; }
+#information-magasin table .cueillir{ width: 10% ;}
+
+#information-magasin table .cueillir-oui{
+	position: relative;
+	width: 26px;
+}
+
+#information-magasin table .cueillir-oui img{
+	margin-top: -8px;
+}
+
+#information-magasin table .cueillir-oui .horaire{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 35px;
+	width: 180px;
+	padding: 5px 10px;
+	background: #fff;
+	border: 1px solid @main-color;
+
+	z-index: 100;
+}
+
+#information-magasin table .cueillir-oui .horaire p{
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+}
+
+#information-magasin table .cueillir-oui .horaire ul{
+	padding: 5px 0;
+	font-size: 14px;
+}
+
+#information-magasin table .cueillir-oui:hover{
+	cursor: pointer;
+}
+#information-magasin table .cueillir-oui:hover .horaire{ 
+	display: block;
+ }
+
+//conversation
+ #information-magasin form#add-conversation{
+ 	overflow: hidden;
+ 	
+ }
+
+ #information-magasin form#add-conversation textarea,
+ #information-magasin form#add-conversation input{
+	float: left;
+ }
+
+#information-magasin form#add-conversation input{
+	width: 20%;
+	margin: 0;
+}
+
+#information-magasin form#add-conversation textarea{
+	width: 50%;
+	margin: 0 15px;
+	padding: 10px;
+}
+
+#information-magasin form#add-conversation input[type="submit"]{
+	width: 20%;
+	height: 100px;
+}
+
+#information-magasin table#conversation{
+	width: 100%;
+	padding-top: 35px;
+	margin: 25px 0 0 0;
+	// margin-bottom: 0px;
+	border-top: 1px solid @grey-color;
+	// border-bottom: 1px solid @grey-color;
+}
+
+ #information-magasin table#conversation td{
+ 	padding: 10px 0;
+ }
+
+ #information-magasin table#conversation td.pseudo{
+ 	font-weight: bold;
+ 	text-align: right;
+ 	padding-right: 10px;
+ }
+
+// aside
+.page-magasin aside#magasin-sidebar{
+	.make-md-column(6);
+	padding-top: 0;	
+}
+
+p.no-padding{
+	margin: 0;
+	padding: 0;
+}
+
+aside#magasin-sidebar #jardin-ouvert{
+	padding-bottom: 26px;
+}
+
+aside#magasin-sidebar #jardin-ouvert p.label{
+	font-family: @font-family-sans-serif;
+	margin-top: 10px;
+	font-weight: @semi-bold;
+}
+
+aside#magasin-sidebar form{
+	padding-top: 0;
+}
+
+#contact-magasin input{
+	width: 280px;
+}
+
+
+/* ------ Profil ------ */
+.page-profil ul{
+	padding-top: 20px;
+}
+.page-profil ul li{
+	overflow: hidden;
+	margin: 4px 0;
+}
+
+.page-profil ul span{
+	display: block;
+	float: left;
+	width: 100px;
+	margin-right: 15px;
+	font-family: 'liberation_bold';
+	text-align: right;
+
+}
+
+// magasin
+.page-profil #voir-boutique{
+	padding: 10px 0 15px 0;
+}
+.page-profil a.profil-button{
+	padding: 3px 0;
+	margin-bottom: 50px; 
+	color: #bbb;
+}
+
+.page-profil a.profil-button:hover{
+	color: @main-color;
+}
+
+// .page-profil a.profil-button:active{
+// 	color: #fff;
+// 	background: @main-color;
+// }
+
+.page-profil #profil-magasin p{
+	padding-top: 8px;
+}
+
+.page-profil #profil-magasin p strong{
+	font-size: 18px;
+	margin: 10px 0;
+}
+
+.page-profil #profil-magasin .button-edit{
+	padding-bottom: 15px;
+}
+
+.storage{
+	// margin-bottom: 15px;
+	margin: 5px 0 35px 0;
+}
+.storage thead td{
+	font-family: @font-family-sans-serif;
+	font-size: 15px;
+	font-weight: @semi-bold;
+	text-align: left;
+	// padding: 20px 0;
+}
+
+.storage th{
+	padding-top: 0px ;
+}
+.storage td{
+	padding: 3px 0;
+}
+.storage .articles{ min-width: 160px; }
+.storage .prix{ min-width: 85px; }
+.storage .payement{ min-width: 180px; }
+.storage .cueillir_oui{ min-width: 42px;  }
+
+.storage .edit,
+.storage .supprimer{
+	min-width: 35px; 
+}
+
+.storage .edit a,
+.storage .supprimer a{
+	display: block; 
+	width: 23px;
+	height: 23px;
+	// min-width: 35px; 
+}
+
+.storage .edit{background: url(../images/editer.png) center  12px no-repeat;}
+.storage .edit:hover{background: url(../images/editer.png) center  -25px no-repeat;}
+
+.storage .supprimer{background: url(../images/delete.png) center  12px no-repeat;}
+.storage .supprimer:hover{background: url(../images/delete.png) center  -25px no-repeat;}
+
+// Favoris
+.page-profil #profil-favoris{ overflow: hidden; }
+.page-profil #profil-favoris .left{
+	.make-md-column(8);
+	padding-left : 0px;
+}
+.page-profil #profil-favoris ul{
+	overflow: hidden;
+	padding-top: 15px;
+}
+	
+
+.page-profil #profil-favoris li span{
+	font-family: @font-family-sans-serif;
+	font-size: 14px;
+	font-weight: @semi-bold;
+	text-align: left;
+}
+.page-profil #profil-favoris li a{
+	padding: 5px 0;
+}
+.page-profil #profil-favoris li a:hover{
+	color: @main-color;
+}
+
+.page-profil #profil-favoris .supprimer{
+	display: block;
+	float: left;
+	width: 14px;
+	height: 18px;
+	margin-right: 10px;
+	background: url(../images/delete-min.png) 0 5px no-repeat;
+}
+
+.page-profil #profil-favoris .supprimer:hover{
+	background: url(../images/delete-min.png) 0 -19px no-repeat;
+}
+
+/* ------ Contact ------ */
+
+.contact form,
+.contact #presentation{
+	width: 680px;
+	margin: 0 auto;
+}
+
+.contact a,
+.terms a{
+	color: #bbb;
+}
+
+.contact a:hover,
+.terms a:hover{
+	color: @main-color;
+}
+
+.contact form input{
+	width: 280px;
+}
+
+/* ------ 404 ------ */
+
+.error a{
+	color: @main-color;
+}
+
+.error a:hover{
+	color: @main-color;
+	border-bottom: 1px solid @main-color;
+}
+
+.error a:hover{
+	color: @main-color;
+	border-bottom: 0px solid @main-color;
+}
+
+
+//Done
+//Acheter
+//Profil
+//Search result
+//Boutique
+//Vendre
+//Inscrire sa cueillette
+//Cueillette
+//Home
+//menu
+//conexion
+// créer magasin
+
+////////////////////////
+//       @media       //
+////////////////////////
+
+// desktop & tab
+@media (max-width: 1000px){
+
+	.desktop-1000{display: none;}
+
+	// Acheter
+	#recherche-formulaire{
+		.make-sm-column(6);
+		border-right: 1px solid @grey-color;
+	}
+
+	#recherche-carte{
+		.make-sm-column(10);
+		padding-left: 40px;
+	}
+
+	#googlemap #gmap-shop_1{
+		position: absolute;
+		left: 183px;
+		top: 233px;
+	}
+
+	#googlemap #gmap-shop_2{
+		position: absolute;
+		left: 10px;
+		top: 325px;
+	}
+
+	#googlemap #gmap-recherche{
+		width: 278px;
+		height: 78px;
+
+		background: url(../images/gmap/recherche_small.png) no-repeat;
+	}
+
+	//Vendre
+	.page-vendre fieldset{
+		.make-sm-column(8);
+		padding-left: 0;
+	}
+
+	//Inscrire sa cueillette
+	.page-inscrire-cueillette fieldset{
+		.make-sm-column(8);
+	}
+
+	//cueillette
+	table.cueillette-ouverte{
+		font-size: 14px;
+		width: 100%;
+	}
+	.page-cueillette table.cueillette-ouverte td.distance{
+		width: 15%; 
+	}
+
+	//Inscrire sa cueillette
+	.page-inscrire-cueillette fieldset{
+		padding-left: 0;
+	}
+
+	// Magasin
+	.page-magasin #information-magasin{
+		.make-sm-column(16);
+		padding-bottom: 0px;
+	}
+
+	#information-magasin table{width: 70%;}	
+	#information-magasin table .articles{ width: 20%; }
+	#information-magasin table .mode{ width: 40%; }
+
+	.page-magasin aside#magasin-sidebar{
+		.make-sm-column(16);
+		padding-top: 0;	
+	}
+
+	//Profil
+	.page-profil #profil-favoris .left{
+		.make-sm-column(8);
+		padding-left : 0px;
+	}
+}
+
+// tablette 768x
+@media (max-width: @screen-sm) {
+
+	// body{background: blue;}
+
+	#content{padding-top: 20px;}
+
+	//Menu
+	#logo {	
+		position: absolute;
+		left: 50%;
+		margin-left: -45px;
+	}
+
+	/* ------ Pop-in create-shop ------ */
+	#create_shop-popup{
+		width: 365px;
+		padding-left: 45px;
+		padding-right: 45px;
+		height: 1550px;
+	}
+
+	 form#create_shop{
+		width: 365px;
+		padding: 0 40px;
+	}
+
+	form#create_shop fieldset.modalite{
+		margin-left: 0;
+		padding-left: 0;
+		margin-top: 5px;
+		border-left: 0px solid @grey-color;
+	}
+
+	ul.banner_choice input[type=radio]{
+		width: 250px;
+	}
+
+	form#create_shop fieldset.modalite input.rue{width: 179px;}
+	form#create_shop fieldset.modalite input.ville{width: 130px;}
+
+	form#create_shop fieldset#valider-boutique{
+		// width: 200px;
+		width: 100%;
+		margin-top: 0;
+	}
+
+	#create_shop input[type=submit]{
+		clear: both;
+		
+	}
+
+	//Banner
+	.banner-home{
+		background: url(../images/banner/banner-sm.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	.banner-acheter{
+		background: url(../images/banner/banner-sm.jpg) no-repeat;
+		background-position: center -310px ;
+	}
+
+	.banner-vendre{
+		background: url(../images/banner/banner-sm.jpg) no-repeat;
+		background-position: center -620px ;
+	}
+
+	.banner-cueillette{
+		background: url(../images/banner/banner-sm.jpg) no-repeat;
+		background-position: center -930px ;
+	}
+
+	.banner-error{
+		background: url(../images/banner/error-sm.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	//banner boutique
+	.banner_shop_un{
+		background: url(../images/banner/boutique-sm.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	.banner_shop_deux{
+		background: url(../images/banner/boutique-sm.jpg) no-repeat;
+		background-position: center -310px ;
+	}
+
+	.banner_shop_trois{
+		background: url(../images/banner/boutique-sm.jpg) no-repeat;
+		background-position: center -620px ;
+	}
+
+	.banner_shop_quatre{
+		background: url(../images/banner/boutique-sm.jpg) no-repeat;
+		background-position: center -930px ;
+	}
+
+	.banner_shop_cinq{
+		background: url(../images/banner/boutique-sm.jpg) no-repeat;
+		background-position: center -1240px ;
+	}
+
+	// Acheter
+	#recherche-formulaire{
+		.make-sm-column(16);
+		border-right: 0px solid @grey-color;
+	}
+
+	#recherche-carte{
+		.make-sm-column(16);
+		padding-left: 0px;
+		padding-top: 36px;
+	}
+
+	#googlemap #gmap-shop_1{
+		position: absolute;
+		left: 48%;
+		top: 233px;
+	}
+
+	#googlemap #gmap-shop_2{
+		position: absolute;
+		left: 15%;
+		top: 320px;
+	}
+
+	//Search-result
+	table.result thead tr th{font-size: 14px;}
+
+	//Vendre
+	.page-vendre fieldset{
+	.make-xs-column(8);
+	padding: 0;
+	padding-right: 20px;
+	overflow: hidden;
+	}
+
+	.page-vendre fieldset.modalite{
+	padding-left: 0;
+	padding-right: 0;
+	}
+
+	//cueillette
+	.page-cueillette table.cueillette-ouverte td.distance{ width: 16%; }
+
+	//Inscrire sa cueillette
+	.page-inscrire-cueillette fieldset{
+		.make-xs-column(8);
+	}
+
+	.page-inscrire-cueillette fieldset{
+		padding-left: 0;
+	}
+
+	//Profil
+	.page-profil #profil-favoris .left{
+		.make-xs-column(8);
+		padding-left : 0px;
+	}	
+}
+
+/* ------ Tablette portrait -------- */
+
+@media screen and (min-device-height: 1024px), screen and (min-height: 1024px) {
+
+	#content{min-height: 910px;}
+
+}
+
+
+@media (max-width: 700px) {
+
+	// body{ background: red; }
+
+	.tablette-700-hide{display: none;}
+
+	//Menu
+	#main-menu { display:none; }
+	#main-menu-smartphone{display: block; overflow: hidden; font-family: @font-family-sans-serif;}
+	
+	a#logo-smartphone{
+		display: block;
+		width: 150px;
+		height: 50px;
+		float: left;
+		text-indent: -9999px;
+
+		background: url(../images/sprite-xs.png) no-repeat;
+	}
+
+	a#logo-smartphone.current{
+		background: url(../images/sprite-xs.png) 0 -50px no-repeat;
+	}
+
+	ul#main-menu-account-smartphone{
+		float: right;
+		margin-top: 4px;
+	}
+
+	ul#main-menu-account-smartphone li{text-align: right;}
+
+	ul#main-menu-account-smartphone li a{
+		padding: 5px 0;
+		font-size: 12px;
+		// color: #858585;
+	}
+
+	ul#main-menu-links-smartphone{
+		clear: both;
+		border-top: 1px solid @grey-color;
+		overflow: hidden;
+	}
+
+	ul#main-menu-links-smartphone li{
+		float: left;
+		width: 33%;
+	}
+
+	ul#main-menu-links-smartphone li.text-center{text-align: center;}
+	ul#main-menu-links-smartphone li.text-right{text-align: right;}
+
+	ul#main-menu-links-smartphone li a{
+		display: block;
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		// color: #858585; 
+	}
+
+	#main-menu-smartphone li a.current{
+		text-transform: underline;
+		color: @menu-color;
+		font-weight: @semi-bold;
+	}
+	
+	//Connexion
+	#connexion-popup {
+		width: 300px;
+		height: 600px;
+		margin: 20px auto;
+	}
+
+	.white-popup{ padding: 30px 0 0px 0;}
+	#iframe_connexion_content form{padding: 0px 40px;}
+	#iframe_connexion_content fieldset{padding-bottom: 35px;}
+
+
+	//Home
+	#banner .container{
+		width: 450px;
+		font-size: 14px;
+	}
+
+	#banner h1{
+		font-size: 34px;
+	}
+
+	#banner a.banner-button{width: 155px;}
+
+	table.cueillette-ouverte .heure{width: 25%;}
+	.button a{display: block; width: 270px;}
+	.button a.margin {margin-bottom: 15px;}
+	ul.recoltes-rependues{margin: 15px 3% 15px 0;}
+	ul.recoltes-rependues li a{width: 125px;}
+	table.recoltes-proximite td.distance{ width: 11%;}
+	table.recoltes-proximite td.lieu{width: 25%;}
+
+	//vendre
+	.page-vendre fieldset{
+		.make-xs-column(16);
+		padding-left: 0;
+	}
+
+	.page-vendre fieldset#annonce{padding-bottom: 34px;}
+
+	//magasin
+	#information-magasin #googlemap-magasin{
+		background: url(../images/gmap/recherche_xsmall.png) left top no-repeat,
+					url(../images/gmap/outils_small.png) right bottom no-repeat,
+					url(../images/gmap/namur_magasin.jpg) center center;
+	}
+
+	#information-magasin form#add-conversation input[type=submit]{
+		height: 40px;
+		margin-bottom: 0;
+	}
+
+	#information-magasin table#conversation{
+		padding-top: 0;
+		margin-top: 0;
+	}
+
+	//cueillette
+	.page-cueillette table.cueillette-ouverte th{ font-size: 12px; }
+	.page-cueillette table.cueillette-ouverte td.distance{ width: 23%; }
+
+	//Inscrire sa cueillette
+	.page-inscrire-cueillette fieldset{
+		.make-xs-column(16);
+	}
+
+	.page-inscrire-cueillette #recoltes{
+		padding-top: 36px;
+		min-height: 50px;
+	}
+
+	.page-inscrire-cueillette fieldset{padding-left: 0;}
+
+	//Magasin
+	#information-magasin table{ width: 100%;}
+	#information-magasin table .articles{ width: 20%; }
+	#information-magasin table .mode{ width: 40%; }
+
+	 #information-magasin form#add-conversation textarea,
+	 #information-magasin form#add-conversation input{
+		clear: both;
+	 }
+
+	#information-magasin form#add-conversation input{
+		width: 220px;
+		margin: 5px 0;
+	}
+
+	#information-magasin form#add-conversation textarea{
+		width: 100%;
+		margin: 5px 0;
+	}
+
+	#information-magasin form#add-conversation input[type="submit"]{
+		width: 220px;
+		margin-bottom: 15px;
+	}
+
+	//profil
+	.storage .articles{ min-width: 100px; }
+	.storage .prix{ min-width: 70px; }
+	.storage .payement{ min-width: 160px; }
+
+	//contact
+	.contact form,
+	.contact #presentation{
+		width: 450px;
+		margin: 0 auto;
+	}
+
+}
+
+// smartphone 480px
+@media (max-width: @screen-xs) {
+// @media	screen and (max-device-width: @screen-xs), screen and (max-width: @screen-xs){
+// max-width: @container-tablet;
+
+	// body {background: green;}
+
+	.smartphone-480-hide{display: none;}
+
+	//Banner
+	#banner {height: 150px;}
+
+	#banner.banner-home{
+		height: 300px;
+		background: url(../images/banner/banner-xs.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	.banner-acheter{
+		background: url(../images/banner/banner-xs.jpg) no-repeat;
+		background-position: center -310px ;
+	}
+
+	.banner-vendre{
+		background: url(../images/banner/banner-xs.jpg) no-repeat;
+		background-position: center -470px ;
+	}
+
+	.banner-cueillette{
+		background: url(../images/banner/banner-xs.jpg) no-repeat;
+		background-position: center -630px ;
+	}
+
+	.banner-error{
+		background: url(../images/banner/error-xs.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	//banner boutique
+	.banner_shop_un{
+		background: url(../images/banner/boutique-xs.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	.banner_shop_deux{
+		background: url(../images/banner/boutique-xs.jpg) no-repeat;
+		background-position: center -160px ;
+	}
+
+	.banner_shop_trois{
+		background: url(../images/banner/boutique-xs.jpg) no-repeat;
+		background-position: center -320px ;
+	}
+
+	.banner_shop_quatre{
+		background: url(../images/banner/boutique-xs.jpg) no-repeat;
+		background-position: center -480px ;
+	}
+
+	.banner_shop_cinq{
+		background: url(../images/banner/boutique-xs.jpg) no-repeat;
+		background-position: center -640px ;
+	}
+
+	//Home
+	#banner .container{
+		width: 97%;
+		font-size: 14px;
+	}
+	#banner h1{
+		font-size: 30px;
+		padding-top: 25px;
+	}
+	#banner a.banner-button{
+		width: 125px;
+	}
+	#banner span{
+		padding: 0 20px;
+	}
+
+	table.cueillette-ouverte th {font-size: 12px;}
+	table.cueillette-ouverte .heure{width: 30%;}
+
+	ul.recoltes-rependues{margin: 15px 30px 15px 0;}
+	ul.recoltes-rependues.no-border-480{border: none; margin-right: 0;}
+	ul.recoltes-rependues li a{width: 140px;}
+
+	table.recoltes-proximite td.distance{ width: 15%;}
+	table.recoltes-proximite td.lieu{width: 35%;}
+
+	.button-more:hover{
+		color: #fff; 
+
+	 	background: url(../images/more.png) left 0 no-repeat,
+	 				url(../images/button-more_hover.png) right top repeat-y;
+	}
+	.button-more:active{
+		color: #fff;
+		background: url(../images/more.png) center left no-repeat, 
+					@main-color;
+
+		-webkit-transition: 0s ease-out;
+		-moz-transition: 0s ease-out;
+		-ms-transition: 0s ease-out;
+		-o-transition: 0s ease-out;
+		transition: 0s ease-out;
+	}
+
+	//Acheter
+	#googlemap{
+		height: 350px;
+	}
+
+	#googlemap #gmap-shop_1{
+		position: absolute;
+		left: 45%;
+		top: 182px;
+	}
+
+	#googlemap #gmap-shop_2{
+		position: absolute;
+		left: 5%;
+		top: 275px;
+	}
+
+	#googlemap #gmap-recherche{
+		width: 201px;
+		height: 52px;
+
+		background: url(../images/gmap/recherche_xsmall.png) no-repeat;
+	}
+
+	#googlemap #gmap-tools{
+		width: 120px;
+		height: 103px;
+
+		background: url(../images/gmap/outils_small.png) no-repeat;
+	}
+
+	//Search-result
+	table.result thead tr th{
+		font-size: 12px;
+	}
+
+	//cueillette
+	.page-cueillette table.cueillette-ouverte td.distance{ width: 23%; padding: 0;}
+	table.cueillette-ouverte tbody tr:hover  .distance{ background: none; }
+	table.cueillette-ouverte td.articles a{ padding-left: 10px; padding-right: 10px;}
+
+	// Magasin
+	.page-magasin #information-magasin{
+		.make-xs-column(16);
+		padding-bottom: 0px;
+	}
+
+	#information-magasin span{font-size: 14px;}
+	#information-magasin #googlemap-magasin{width: 100%;}
+
+
+	#information-magasin #action p,
+	#information-magasin #action a{
+		clear: both; 
+	}
+
+	#information-magasin #action p{
+		float: left;
+		padding-top: 10px;
+	}
+
+	#information-magasin table{ width: 70%;}
+
+	#information-magasin table .cueillir-oui img{
+		margin-top: -6px;
+		width: 22px;
+		height: 19px;
+	}
+
+	#information-magasin table .cueillir-oui .horaire{
+		left: -9999px;
+	}
+
+	//Profil
+	.page-profil #profil-favoris .left{
+		.make-xs-column(16);
+		padding-left : 0px;
+	}
+
+	//contact
+	.contact form,
+	.contact #presentation{
+		width: 350px;
+		margin: 0 auto;
+	}
+
+
+}
+
+@media (max-width: 380px) {
+// @media	screen and (max-device-width: 380px), screen and (max-width: 380px){
+// max-width: @container-tablet;
+
+	body {
+		// background: green;
+		background: #fff;
+		font-size: 14px;
+	}
+
+	h2{font-size: 18px;}
+
+	.smartphone-380-hide{display: none;}
+
+	//Home
+	#banner .container{
+		// width: 280px;
+		font-size: 14px;
+	}
+
+	#banner h1{
+		font-size: 26px;
+		padding-top: 20px;
+	}
+
+	#banner a.banner-button{
+		font-size: 16px;
+		width: 95px;
+	}
+
+	#banner span{padding: 0 15px;}
+
+	#content.home { padding-left: 0; padding-right: 0;}
+	table.cueillette-ouverte .heure {width: 37%; }
+	table.cueillette-ouverte .heure a{padding-left: 5px; padding-right: 5px;}
+	.button a{width: 100%;}
+
+	ul.recoltes-rependues{
+		clear: both;
+		margin: 10px 30px 0px 0px;}
+	ul.recoltes-rependues.border{border: none; margin-right: 0;}
+	ul.recoltes-rependues li a{width: 140px;}
+
+	table.recoltes-proximite td.distance{ width: 20%;}
+	table.recoltes-proximite td.lieu{width: 40%;}
+
+	aside#widget{padding-left: 0;padding-right: 0;}
+
+	//Connexion
+	#connexion-popup {
+		width: 260px;
+		height: 610px;
+		margin: 40px auto;
+	}
+
+	.white-popup{padding: 30px 0 0px 0;}
+	#iframe_connexion_content form{padding: 0px 20px;}
+	#iframe_connexion_content fieldset{padding-bottom: 35px;}
+
+
+	/* ------ Pop-in create-shop ------ */
+
+	#create_shop-popup{width: 270px;padding-left: 0px;
+		padding-right: 0px;}
+
+	form#create_shop{
+		width: 270px;
+		
+		padding: 0 10px;
+	}
+
+	ul.banner_choice input[type='radio'] + label{width: 250px;}
+	#create_shop input.shop_name, #create_shop input.place_name{ width: 250px;}
+	// form#create_shop fieldset.modalite input.rue{width: 185px;}
+	// form#create_shop fieldset.modalite input.ville{width: 140px;}
+	form#create_shop fieldset.modalite input.rue{width: 179px;}
+	form#create_shop fieldset.modalite input.ville{width: 130px;}
+	#create_shop fieldset.modalite select{width: 250px;}
+	#create_shop input[type=submit]{width: 250px;}
+
+	//Acheter
+	#googlemap{
+		height: 300px;
+		background: url(../images/gmap/namur_small.jpg) no-repeat;
+	}
+
+	#googlemap #gmap-shop_1{
+		position: absolute;
+		left: 100px;
+		top: 130px;
+	}
+
+	#googlemap #gmap-shop_2{
+		position: absolute;
+		left: 10px;
+		top: 175px;
+	}
+
+	//Search-result
+	table.result tbody tr td{
+		font-size: 14px;
+	}
+
+	table.result .lieu{ width: 80px}
+	table.result .articles{ width: 90px;}
+	table.result .prix{ width: 90px;}
+	table.result .not-found{ padding: 30px 0; text-align: center;}
+
+	//Vendre
+	fieldset.modalite,
+	fieldset#annonce{
+		padding-right: 0;
+	}
+
+	.heure-select label{
+		clear: both;
+		width: 20px;
+		text-align: right;
+	}
+
+	fieldset.modalite input{ display: inline; }
+	fieldset.modalite input.numero{ width: 15%; }
+	fieldset.modalite input.rue{
+		width: 78%;
+		margin-left: 5%;
+	}
+
+	fieldset.modalite input.cp{ width: 30%; }
+	fieldset.modalite input.ville{
+		width: 63%;
+		margin-left: 5%;
+	}
+
+	fieldset.modalite select.pays{width: 100%;}
+	fieldset#ajouter_au_magasin{padding-right: 0;}
+
+	fieldset#ajouter_au_magasin input[type="submit"],
+	input.date{
+		width: 100%;
+
+	}
+
+	//cueillette-ouverte
+	.page-inscrire-cueillette input[type=submit]{width: 100%;}
+	#add_recolte{width: 75%;}
+
+	#button_add{
+		width: 18%;
+
+		margin: 10px 0 0 5%;
+		padding: 0 6%;
+	}
+
+	//magasin
+	#information-magasin table{ width: 100%;}
+	#contact-magasin input,
+	#contact-magasin textarea{
+		width: 85%;
+	}
+
+	#information-magasin ul li p{width: 140px;}
+
+	//Profil
+	.page-profil p.profil-informarttion-380{
+		width: 145px;
+		float: left;
+		padding: 0;
+	}
+
+	.page-profil #profil-favoris .left{
+		.make-xs-column(16);
+		padding-left : 0px;
+	}
+
+	.page-profil #profil-magasin p strong{font-size: 16px;}
+	.storage .articles{ min-width: 90px; }
+	.storage .prix{ min-width: 80px; }
+
+	.storage .edit,
+	.storage .supprimer{
+		min-width: 45px; 
+	}
+
+	/* ------ Contact ------ */
+	.contact form,
+	.contact #presentation{
+		width: 280px;
+		margin: 0 auto;
+	}
+
+	.contact form input{
+		width: 90%;
+	}
+
+	.contact form textarea{
+		width: 90%;
+	}
+}
+
+
+//large desktop 1200px
+@media screen and(min-width: @screen-lg) {
+// max-width: @container-lg-desktop;
+
+
+	/* ---- #banner ---- */
+
+	#banner {
+	    height: 400px;
+	}
+
+	.banner-home{
+		background: url(../images/banner/banner-lg.jpg) center 0 no-repeat;
+		background-position: center 0;
+	}
+
+	.banner-acheter{
+		background: url(../images/banner/banner-lg.jpg) no-repeat;
+		background-position: center -410px;
+	}
+
+	.banner-vendre{
+		background: url(../images/banner/banner-lg.jpg) no-repeat;
+		background-position: center -820px;
+	}
+
+	.banner-cueillette{
+		background: url(../images/banner/banner-lg.jpg) no-repeat;
+		background-position: center -1230px;
+	}
+
+	.banner-error{
+		background: url(../images/banner/error-lg.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	//banner boutique
+	.banner_shop_un{
+		background: url(../images/banner/boutique-lg.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	.banner_shop_deux{
+		background: url(../images/banner/boutique-lg.jpg) no-repeat;
+		background-position: center -410px ;
+	}
+
+	.banner_shop_trois{
+		background: url(../images/banner/boutique-lg.jpg) no-repeat;
+		background-position: center -820px ;
+	}
+
+	.banner_shop_quatre{
+		background: url(../images/banner/boutique-lg.jpg) no-repeat;
+		background-position: center -1230px ;
+	}
+
+	.banner_shop_cinq{
+		background: url(../images/banner/boutique-lg.jpg) no-repeat;
+		background-position: center -1640px ;
+	}
+
+	/* -- #banner > home -- */
+
+	#banner h1{ padding: 60px 0 10px 0; }
+
+	#banner a.banner-button,
+	#banner span{
+		margin-top: 36px;
+	}
+
+	//Acheter
+	#googlemap #gmap-shop_1{
+		position: absolute;
+		left: 315px;
+		top: 233px;
+	}
+
+	#googlemap #gmap-shop_2{
+		position: absolute;
+		left: 130px;
+		top: 325px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+//large desktop + 1600px
+@media screen and (min-width: 1600px){
+
+
+		/* ---- #banner ---- */
+
+	#banner {
+	    height: 500px;
+	}
+
+	#banner .container{
+		padding-top: 50px;
+	}
+
+	.banner-home{
+		background: url(../images/banner/banner-xlg.jpg) no-repeat;
+		background-position: center 0;	
+	}
+
+	.banner-acheter{
+		background: url(../images/banner/banner-xlg.jpg) no-repeat;
+		background-position: center -510px;
+	}
+
+	.banner-vendre{
+		background: url(../images/banner/banner-xlg.jpg) no-repeat;
+		background-position: center -1020px;
+	}
+
+	.banner-cueillette{
+		background: url(../images/banner/banner-xlg.jpg) no-repeat;
+		background-position: center -1530px;
+	}
+
+	.banner-error{
+		background: url(../images/banner/error-xlg.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	//banner boutique
+	.banner_shop_un{
+		background: url(../images/banner/boutique-xlg.jpg) no-repeat;
+		background-position: center 0 ;
+	}
+
+	.banner_shop_deux{
+		background: url(../images/banner/boutique-xlg.jpg) no-repeat;
+		background-position: center -510px ;
+	}
+
+	.banner_shop_trois{
+		background: url(../images/banner/boutique-xlg.jpg) no-repeat;
+		background-position: center -1020px ;
+	}
+
+	.banner_shop_quatre{
+		background: url(../images/banner/boutique-xlg.jpg) no-repeat;
+		background-position: center -1530px ;
+	}
+
+	.banner_shop_cinq{
+		background: url(../images/banner/boutique-xlg.jpg) no-repeat;
+		background-position: center -2040px ;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*For smartphone / container > 300*/
+// @media screen and (max-width: 700px){
+// 	body{background: red;}
+// 	.container {
+// 		width: 300px;
+// 		padding: 0 10px;
+// 		margin: 0 auto;
+// 		background: green;
+// 	}
+
+// }
+
+/* between 700 and 960 / container>700 */
+// @media screen and (min-width: 700px) and (max-width: 960px){
+// 	body{background: red;}
+
+// 	.container {
+// 		width: 680px;
+// 		padding: 0 10px;
+// 		margin: 0 auto;
+// 		background: green;
+// 	}
+
+// }
+
+/*between 1200 and 1600*/
+// @media screen and (min-width: 1200px) and (max-width: 1600px){
+
+// 		/* ---- #banner ---- */
+
+// 	#banner {
+// 	    height: 450px;
+// 	}
+
+// 	.banner-home{
+// 		background: url(../images/banner/banner-1200.jpg) center 0 no-repeat;
+// 		background-position: center 0;
+// 	}
+
+// 	.banner-acheter{
+// 		background: url(../images/banner/banner-1200.jpg) no-repeat;
+// 		background-position: center -460px;
+// 	}
+
+// }
+
+/*For 1600 and more*/
+// @media screen and (min-width: 1600px){
+
+// 		/* ---- #banner ---- */
+
+// 	#banner {
+// 	    height: 550px;
+// 	}
+
+// 	.banner-home{
+// 		background: url(../images/banner/banner-1600.jpg) no-repeat;
+// 		background-position: center 0;	
+// 	}
+
+// 	.banner-acheter{
+// 		background: url(../images/banner/banner-1600.jpg) no-repeat;
+// 		background-position: center -560px;
+// 	}
+
+// }
